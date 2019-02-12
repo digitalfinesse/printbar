@@ -1,0 +1,29 @@
+// stylelint-disable at-rule-empty-line-before
+
+@import "variables";
+@import "functions";
+@import "mixins";
+@import "sprites";
+@import "fonts";
+@import "vendor";
+@import "base";
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	background-color: #fff;
+
+}
+
+.wrapper {
+	max-width: 1170px;
+	min-width: 1024px;
+	margin: 0 auto;
+}
+
+.header {
+
+}
