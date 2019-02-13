@@ -129,6 +129,7 @@ section.main > * {
 				flex-direction: column;
 				justify-content: space-between;
 				padding: 20px;
+				max-width:625px;
 
 				h2 {
 					margin-bottom: 5px;
@@ -161,7 +162,7 @@ section.main > * {
 
 					.text {
 						margin-top: 20px;
-						margin-right: 20px;
+						//margin-right: 20px;
 						display: flex;
 						flex-direction: column;
 
@@ -242,8 +243,96 @@ section.main > * {
 				}
 			}
 			.data {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+				align-items: center;
+
 				width: 223px;
 				background-color: $color-grey-background;
+
+				.stars {
+					display: flex;
+					align-items: center;
+					justify-content: space-around;
+					margin-top: 25px;
+					margin-bottom: 10px;
+				}
+
+				.rating {
+					margin-bottom: 10px;
+					span.main {
+						font-size: 26px;
+						font-family: $ff-bold-text;
+						color: $color-text;
+					}
+					span.from {
+						font-size: 20px;
+						font-family: $ff-regular-text;
+						color: $color-text-where;
+					}
+				}
+
+				p.feedbacks {
+					font-size: 13px;
+					color: $color-text-where;
+					font-family: $ff-regular-text;
+					margin-bottom: 30px;
+				}
+
+				p.price-title {
+					font-size: 10px;
+					font-family: $ff-regular-text;
+					color: $color-text-where;
+					margin-bottom: 10px;
+				}
+
+				p.price {
+					font-size: 30px;
+					font-family: $ff-bold-text;
+					color: $color-text;
+					margin-bottom: 20px;
+
+				}
+
+				a.more {
+					background-color: $color-blue-link;
+					color: $color-white;
+					width: 170px;
+					text-align: center;
+					padding-top: 15px;
+					padding-bottom: 15px;
+					margin-bottom: 25px;
+					border-radius: 6px;
+					text-decoration: none;
+
+					.a {
+						display: inline;
+					}
+					.b {
+						display: none;
+					}
+
+					&:hover {
+						background-color: $color-button-hover;
+					}
+					&:hover .a {
+						display: none;
+					}
+					&:hover .b {
+						display: inline;
+					}
+
+					&:active {
+						background-color: $color-button-active;
+					}
+					&:active .a {
+						display: inline;
+					}
+					&:active .b {
+						display: none;
+					}
+				}
 			}
 
 			&-popular {
@@ -251,7 +340,25 @@ section.main > * {
 				box-shadow: -5px -5px 8px 0 rgba(255, 240, 212, 0.6), 0 6px 10px 0 rgba(255, 240, 212, 0.6);
 
 				.data{
+					width: 223px;
 					background-color: $color-gold-background;
+					position: relative;
+
+					span.sprite-popular {
+						position:absolute;
+						top: -4px;
+						right: -4px;
+					}
+
+					.stars {
+						margin-top: 60px;
+					}
+					.feedbacks {
+						margin-bottom: 40px;
+					}
+					a.more {
+						margin-bottom: 60px;
+					}
 				}
 			}
 		}
