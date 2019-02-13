@@ -2,22 +2,25 @@ extends pug/base
 
 append vars
 	//- ...
+	-title = "Тестовое задание для Принт Бара"
 
 block content
 	//- ...
 
 	.header
 		.wrapper
-			span Мир Лагерей
-			.search i Поиск лагеря
+			.logo
+				h3 Мир Лагерей
+			.search
+				input(type="text" placeholder="Поиск лагеря").lens
 
 	.plate
 		.wrapper
-			p Помогаем выбрать лагерь для вашего ребенка.
+			h2.slogan Помогаем выбрать лагерь для вашего ребенка.
 				br
 				| Быстро и бесплатно.
 
-	.name
+	.page-name
 		.wrapper
 			p.breadcrumbs Детские лагеря  / Все / Россия  / Москва и Московская область  /  Языковые лагеря
 			h1 Языковые и оздоровительные лагеря в Краснодарском крае на берегу Черного моря

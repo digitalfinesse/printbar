@@ -14,8 +14,16 @@
 }
 
 html, body {
-	background-color: #fff;
+	background-color: $color-white;
+	color: $color-text;
+}
 
+h1, h2 {
+	font-family: $ff-bold-text, sans-serif;
+}
+
+p {
+	font-family: $ff-regular-text;
 }
 
 .wrapper {
@@ -24,6 +32,143 @@ html, body {
 	margin: 0 auto;
 }
 
-.header {
+.header > * {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	height: 70px;
+	padding: 15px 0;
 
+	.logo {
+		h3 {
+			font-family: $ff-bold-text;
+			font-size: 26px;
+			font-weight: bold;
+		}
+	}
+
+	.search {
+		margin: auto 0;
+	}
+}
+
+.plate {
+	display: flex;
+	align-items: center;
+	background-image: linear-gradient(to top, rgba(37,37,37,.6), rgba(37,37,37,.6)), url("../images/plate-background.jpg");
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 160px;
+	width: 100%;
+	color: #fff;
+	margin-bottom: 35px;
+
+	h2.slogan {
+		font-size: 28px;
+		color: #fff;
+		margin: 0;
+	}
+}
+
+.page-name {
+	margin-bottom: 30px;
+
+	p.breadcrumbs {
+		font-size: 14px;
+	}
+
+	h1 {
+		font-size: 40px;
+	}
+
+	p.result {
+		font-size: 24px;
+		span.numbers {
+			color: $color-blue-bold-text;
+			font-family: $ff-bold-text;
+			margin-left: 7px;
+			margin-right: 7px;
+		}
+	}
+}
+
+section.main > * {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+
+	.snippets {
+		//max-width: 862px;
+		width: 75%;
+
+		.snippet {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
+	.filter {
+		//width: 275px;
+		width: 25%;
+		height: 235px;
+		background-color: $color-light-grey;
+	}
+}
+
+section.review > * {
+
+
+	.review__blocks {
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
+
+		.block {
+			//max-width: 360px;
+			width: 30%;
+			margin: 15px auto;
+
+			svg {
+				height: 10px;
+			}
+		}
+	}
+
+}
+
+section.find > * {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+
+	form {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+}
+
+section.footer > * {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: flex-start;
+
+	.footer__block {
+		display: block;
+		width: 29%;
+		margin: 20px;
+	}
 }
