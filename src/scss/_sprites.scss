@@ -1,4 +1,25 @@
-$sprites: ();
+$sprites: (
+	"circle-with-dot": (
+		normal: (
+			x: 0,
+			y: 0,
+			width: 13,
+			height: 13,
+			image: "sprites.png",
+			total_width: 13,
+			total_height: 13,
+		),
+		retina: (
+			x: 0,
+			y: 0,
+			width: 26,
+			height: 26,
+			image: "sprites@2x.png",
+			total_width: 26,
+			total_height: 26,
+		),
+	),
+);
 
 @each $name in map-keys($sprites) {
 	.sprite-#{$name} {
