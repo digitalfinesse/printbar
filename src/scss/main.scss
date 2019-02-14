@@ -53,13 +53,6 @@ p {
 }
 
 .plate {
-	//display: flex;
-	//flex-wrap: wrap;
-	//flex-direction: row;
-	//align-content: flex-start;
-	//justify-content: space-between;
-	//align-items: center;
-
 	background-image: linear-gradient(to top, rgba(37,37,37,.6), rgba(37,37,37,.6)), url("../images/plate-background.jpg");
 	background-position: center bottom;
 	background-repeat: no-repeat;
@@ -114,6 +107,12 @@ section.main > * {
 	.snippets {
 		width: 74%;
 
+		.sorting {
+			form {
+
+			}
+		}
+
 		.snippet {
 			display: flex;
 			justify-content: space-between;
@@ -162,7 +161,6 @@ section.main > * {
 
 					.text {
 						margin-top: 20px;
-						//margin-right: 20px;
 						display: flex;
 						flex-direction: column;
 
@@ -346,8 +344,8 @@ section.main > * {
 
 					span.sprite-popular {
 						position:absolute;
-						top: -4px;
-						right: -4px;
+						top: -5px;
+						right: -5px;
 					}
 
 					.stars {
@@ -372,46 +370,178 @@ section.main > * {
 	}
 }
 
-section.review > * {
-
-
-	.review__blocks {
+section.review {
+	background-color: $color-grey-background-feedback;
+	&> * {
 		display: flex;
-		flex-wrap: wrap;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: flex-start;
+		flex-direction: column;
+		align-items: center;
+		h2 {
+			font-size: 45px;
+			color: $color-text-header-feedback;
+			padding-top: 50px;
+			padding-bottom: 15px;
+		}
+		.review__blocks {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: flex-start;
 
-		.block {
-			//max-width: 360px;
-			width: 30%;
-			margin: 15px;
+			.block {
+				//max-width: 360px;
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+				width: 30%;
+				margin: 15px;
 
-			svg {
-				height: 10px;
+
+				.header {
+					display: flex;
+					align-items: center;
+
+					.square-yellow {
+						width: 46px;
+						height: 46px;
+						background-color: $color-gold-border;
+						float: left;
+						margin-right: 17px;
+					}
+
+					h3 {
+						font-size: 16px;
+						color: $color-text-header-feedback-block;
+					}
+				}
+
+				.rating {
+					margin-bottom: 15px;
+
+					span.black-stars {
+						font-size: 13px;
+					}
+
+					.grade {
+						font-size: 15px;
+						font-family: $ff-bold-text;
+						margin-left: 15px;
+					}
+				}
+
+				p.date {
+					font-size: 14px;
+					margin-bottom: 15px;
+				}
+
+				p.text {
+					font-family: $ff-lightitalic-text;
+					font-size: 14px;
+					line-height: 19px;
+					letter-spacing: -.042px;
+					margin-bottom: 20px;
+				}
+
+				p.name {
+					font-size: 16px;
+					font-family: $ff-bold-text;
+					margin-bottom: 5px;
+				}
+
+				p.who {
+					font-size: 16px;
+				}
 			}
 		}
+		a.else {
+			background-color: $color-blue-link;
+			color: $color-white;
+			text-align: center;
+			padding:15px 35px;
+			margin-top: 80px;
+			margin-bottom: 55px;
+			border-radius: 6px;
+			text-decoration: none;
+
+			&:hover {
+				background-color: $color-button-hover;
+			}
+
+			&:active {
+				background-color: $color-button-active;
+			}
+		}
+
 	}
-
 }
+section.find {
+	background-image: linear-gradient(to top, rgba(37,37,37,.4), rgba(37,37,37,.4)), url("../images/find-background.jpg");
+	background-position: center bottom;
+	background-repeat: no-repeat;
+	background-size: cover;
 
-section.find > * {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	justify-content: space-between;
-	align-items: center;
+	color: $color-white;
 
-	form {
+	&> * {
 		display: flex;
 		flex-direction: column;
 		flex-wrap: wrap;
 		justify-content: space-between;
 		align-items: center;
+
+		h2 {
+			margin-top: 50px;
+			margin-bottom: 20px;
+			font-size: 45px;
+			font-family: $ff-bold-text;
+		}
+
+		p {
+			font-size: 22px;
+			font-family: $ff-regular-text;
+		}
+
+		form {
+			display: flex;
+			flex-direction: column;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: center;
+
+			input[type="text"] {
+				padding: 5px 10px;
+				border: 2px solid $color-gold-border;
+				border-radius: 5px;
+			}
+			textarea {
+
+			}
+
+			button.submit {
+				background-color: $color-blue-link;
+				color: $color-white;
+				text-align: center;
+				padding:15px 55px;
+				margin-top: 80px;
+				margin-bottom: 55px;
+				border-radius: 6px;
+				text-decoration: none;
+				outline: 0;
+				border: 0;
+
+				&:hover {
+					background-color: $color-button-hover;
+				}
+
+				&:active {
+					background-color: $color-button-active;
+				}
+			}
+		}
+
 	}
-
 }
-
 section.footer > * {
 	display: flex;
 	flex-direction: row;
