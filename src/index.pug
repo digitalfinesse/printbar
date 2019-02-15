@@ -33,21 +33,24 @@ block content
 			.snippets
 				.sorting
 					form
-						select
-							option Цена: Любая
-							option Цена: До 20000
-							option Цена: До 40000
-							option Цена: До 60000
-						select
-							option Смена: Любая
-							option Смена: Зима
-							option Смена: Осень
-							option Смена: Весна
-						select
-							option Отзывы: Любые
-							option Отзывы: Отличные
-							option Отзывы: Хорошие
-							option Отзывы: Плохие
+						.new-select
+							select
+								option Цена: Любая
+								option Цена: До 20000
+								option Цена: До 40000
+								option Цена: До 60000
+						.new-select
+							select
+								option Смена: Любая
+								option Смена: Зима
+								option Смена: Осень
+								option Смена: Весна
+						.new-select
+							select
+								option Отзывы: Любые
+								option Отзывы: Отличные
+								option Отзывы: Хорошие
+								option Отзывы: Плохие
 
 				.snippet.snippet-popular
 					.info
@@ -277,27 +280,27 @@ block content
 				p Уточнить поиск
 				form
 					label Возраст
-						select(name="age")
-							option Выберите возраст
-							option 0-1
-							option 1-2
-							option 3-4
-							option 5-6
-							option 7-8
-							option 9-10
-							option 11-13
-							option 14-16
+					select(name="age")
+						option Выберите возраст
+						option 0-1
+						option 1-2
+						option 3-4
+						option 5-6
+						option 7-8
+						option 9-10
+						option 11-13
+						option 14-16
 					label Страна
-						select(name="country")
-							option Россия
-							option Турция
-							option Абхазия
+					select(name="country")
+						option Россия
+						option Турция
+						option Абхазия
 					label Тип лагеря
-						select(name="camptype")
-							option Спортивный
-							option Образовательный
-							option Оздоровительный
-							option Просто отдых
+					select(name="camptype")
+						option Спортивный
+						option Образовательный
+						option Оздоровительный
+						option Просто отдых
 					button.submit Найти лагерь
 
 	section.review
@@ -391,26 +394,30 @@ block content
 
 	section.footer
 		.wrapper
-			.footer__block
-				h3 Мир Лагерей
-				hr
-				p Полный каталог программ отдыха для детей в России, странах СНГ, Европе и мире.
-				p Мы поможем подобрать вам лучший детский лагерь для вашего ребенка.
+			.footer__block.footer__block-with-social
+				.text
+					h3 Мир Лагерей
+					hr
+					p Полный каталог программ отдыха для детей в России, странах СНГ, Европе и мире.
+					p Мы поможем подобрать вам лучший детский лагерь для вашего ребенка.
 				.social
-					span.fb
-					span.vk
-					span.phone
-					span.tg
-					span.whatsapp
+					+svg("facebook")
+					+svg("vk")
+					span.sprite-phone
+					+svg("telegram")
+					+svg("whatsapp")
 
 			.footer__block
 				h3 Новые программы
 				hr
 				p Детский оздоровительный лагерь “Искра”
+					br
 					span.date 2018-02-13
 				p Детский оздоровительный лагерь “Искра”
+					br
 					span.date 2018-02-13
 				p Детский оздоровительный лагерь “Искра”
+					br
 					span.date 2018-02-13
 
 			.footer__block
@@ -418,9 +425,10 @@ block content
 				hr
 				p ООО "Многообразие"
 				p 125080, г Москва, шоссе Волоколамское, дом 1 стр. 1, пом. IV комн. 33
-				p Телефон:
-					a +7 (499) 647-82-13
+				p Телефон:&ensp;
+					a(href="") +7 (499) 647-82-13
 				p Связаться по любым вопросам:
+					br
 					a(href="mailto:contact@mir-lagerey.ru") contact@mir-lagerey.ru
-				p Реклама, партнерство:
+				p Реклама, партнерство:&ensp;
 					a(href="mailto:sales@mir-lagerey.ru") sales@mir-lagerey.ru
