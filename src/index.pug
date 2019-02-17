@@ -12,7 +12,12 @@ block content
 			.logo
 				h3 Мир Лагерей
 			.search
-				input(type="text" placeholder="Поиск лагеря").lens
+				form()
+					button(type="submit")
+						+svg("search")#search-icon
+					input(type="text" placeholder="Поиск лагеря" )
+
+
 
 	.plate
 		.wrapper
@@ -42,7 +47,8 @@ block content
 						.new-select
 							select
 								option Смена: Любая
-								option Смена: Зима
+								option
+									span Смена: Зима
 								option Смена: Осень
 								option Смена: Весна
 						.new-select
@@ -266,8 +272,26 @@ block content
 						p Страница
 						.pages
 							.left-arrow
+								span &#9664;
 							.dotes
+								.circle 1
+								.circle-empty
+								.circle-empty
+								.circle-empty
+								.circle-empty
+								.circle-empty
+								.circle-empty
+								.circle-empty
+								.circle-empty
+								.circle-empty
+								.circle-empty
+								.circle-empty
+								.circle 14
+								.circle-empty
+								.circle-empty
+								.circle-empty
 							.right-arrow
+								span &#9654;
 					.range
 						p Показать по:
 						.number
@@ -277,31 +301,34 @@ block content
 							span 200
 
 			.filter
-				p Уточнить поиск
+				h3 Уточнить поиск
 				form
 					label Возраст
-					select(name="age")
-						option Выберите возраст
-						option 0-1
-						option 1-2
-						option 3-4
-						option 5-6
-						option 7-8
-						option 9-10
-						option 11-13
-						option 14-16
+					.new-select
+						select(name="age")
+							option Выберите возраст
+							option 0-1
+							option 1-2
+							option 3-4
+							option 5-6
+							option 7-8
+							option 9-10
+							option 11-13
+							option 14-16
 					label Страна
-					select(name="country")
-						option Россия
-						option Турция
-						option Абхазия
+					.new-select
+						select(name="country")
+							option Россия
+							option Турция
+							option Абхазия
 					label Тип лагеря
-					select(name="camptype")
-						option Спортивный
-						option Образовательный
-						option Оздоровительный
-						option Просто отдых
-					button.submit Найти лагерь
+					.new-select
+						select(name="camptype")
+							option Спортивный
+							option Образовательный
+							option Оздоровительный
+							option Просто отдых
+					input(type="submit" value="Найти лагерь")
 
 	section.review
 		.wrapper
@@ -401,11 +428,16 @@ block content
 					p Полный каталог программ отдыха для детей в России, странах СНГ, Европе и мире.
 					p Мы поможем подобрать вам лучший детский лагерь для вашего ребенка.
 				.social
-					+svg("facebook")
-					+svg("vk")
-					span.sprite-phone
-					+svg("telegram")
-					+svg("whatsapp")
+					a(href="https://facebook.com" target="_blank")
+						+svg("facebook")
+					a(href="https://vk.com" target="_blank")
+						+svg("vk")
+					a(href="tel:+79629244403" target="_blank")
+						+svg("phone")
+					a(href="https://telegram.org" target="_blank")
+						+svg("telegram")
+					a(href="https://api.whatsapp.com/send?phone=79629244403" target="_blank")
+						+svg("whatsapp")
 
 			.footer__block
 				h3 Новые программы
@@ -426,9 +458,9 @@ block content
 				p ООО "Многообразие"
 				p 125080, г Москва, шоссе Волоколамское, дом 1 стр. 1, пом. IV комн. 33
 				p Телефон:&ensp;
-					a(href="") +7 (499) 647-82-13
+					a(href="tel:+74996478213" target="_blank") +7 (499) 647-82-13
 				p Связаться по любым вопросам:
 					br
-					a(href="mailto:contact@mir-lagerey.ru") contact@mir-lagerey.ru
+					a(href="mailto:contact@mir-lagerey.ru" target="_blank") contact@mir-lagerey.ru
 				p Реклама, партнерство:&ensp;
-					a(href="mailto:sales@mir-lagerey.ru") sales@mir-lagerey.ru
+					a(href="mailto:sales@mir-lagerey.ru" target="_blank") sales@mir-lagerey.ru
