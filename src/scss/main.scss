@@ -734,11 +734,13 @@ section.review {
 
 	}
 }
+
 section.find {
 	background-image: linear-gradient(to top, rgba(37,37,37,.4), rgba(37,37,37,.4)), url("../images/find-background.jpg");
 	background-position: center bottom;
 	background-repeat: no-repeat;
 	background-size: cover;
+	//height: 560px;
 
 	color: $color-white;
 
@@ -767,23 +769,53 @@ section.find {
 			flex-wrap: wrap;
 			justify-content: space-between;
 			align-items: center;
+			font-family: $ff-regular-text;
+			margin-bottom: 50px;
 
-			input[type="text"] {
-				padding: 5px 10px;
-				border: 2px solid $color-gold-border;
-				border-radius: 5px;
+
+			.inputs {
+				display: flex;
+				justify-content: space-between;
+				margin-top: 30px;
+				margin-bottom: 20px;
+
+				input[type="text"] {
+					padding: 5px 10px;
+					border: 2px solid $color-gold-border;
+					border-radius: 7px;
+					font-size: 16px;
+					outline: none;
+
+					&::placeholder {
+						font-size: 16px;
+						color: $color-text;
+					}
+
+					&:first-child {
+						margin-right: 20px;
+					}
+				}
 			}
+
 			textarea {
+				width: 400px;
+				height: 180px;
+				padding: 20px;
+				border-radius: 7px;
+				border: 0;
+				outline: none;
 
+				&::placeholder {
+					color: $color-input-placeholder;
+				}
 			}
 
-			button.submit {
+			input[type="submit"] {
 				background-color: $color-blue-link;
 				color: $color-white;
 				text-align: center;
 				padding:15px 55px;
-				margin-top: 80px;
-				margin-bottom: 55px;
+				margin-top: 45px;
 				border-radius: 6px;
 				text-decoration: none;
 				outline: 0;

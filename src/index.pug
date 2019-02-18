@@ -414,10 +414,11 @@ block content
 			h2 Нужна помощь?
 			p Оставьте заявку и мы поможем выбрать идеальный лагерь!
 			form
-				input(type="text" placeholder="Павел" name="name")
-				input(type="text" placeholder="E-mail / Телефон" name="contact")
+				.inputs
+					input(type="text" placeholder="Павел" name="name")
+					input(type="text" placeholder="E-mail / Телефон" name="contact")
 				textarea(placeholder="Сообщение")
-				button.submit Отправить заявку
+				input(type="submit" value="Отправить заявку")
 
 	section.footer
 		.wrapper
